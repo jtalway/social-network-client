@@ -40,7 +40,7 @@ class NewPost extends Component {
   };
 
   // HANDLE CHANGE
-  handleChange = (name) => (event) => {
+  handleChange = name => event => {
     this.setState({ error: "" });
     // grab the value, if name is photo grab event.target.files o/w : value
     const value = name === "photo" ? event.target.files[0] : event.target.value;
@@ -74,7 +74,7 @@ class NewPost extends Component {
               loading: false,
               title: "",
               body: "",
-              photo: "",
+              // photo: "",
               redirectToProfile: true
             });
           }
@@ -86,28 +86,33 @@ class NewPost extends Component {
   newPostForm = (title, body) => (
     <form>
       <div className="form-group">
-        <label className="text-muted">Photo</label>
+        <label>Photo</label>
         <input
           onChange={this.handleChange("photo")}
           type="file"
           accept="image/*"
-          className="form-control"/>
+          className="form-control"
+        />
       </div>
       <div className="form-group">
-        <label className="text-muted">Title</label>
+        <label>Title</label>
         <input
           onChange={this.handleChange("title")}
           type="text"
           className="form-control"
-          value={title}/>
+          value={title}
+          placeholder="Please enter a title for your post"
+        />
       </div>
       <div className="form-group">
-        <label className="text-muted">Body</label>
+        <label>Body</label>
         <textarea
           onChange={this.handleChange("body")}
           type="text"
           className="form-control"
-          value={body}/>
+          value={body}
+          placeholder="Please enter the main text content for your post"
+        />
       </div>
       <button onClick={this.clickSubmit} className="btn btn-raised btn-primary">
         Create Post
