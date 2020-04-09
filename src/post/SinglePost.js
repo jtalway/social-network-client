@@ -102,7 +102,7 @@ class SinglePost extends Component {
             <img
               src={`${process.env.REACT_APP_API_URL}/post/photo/${post._id}`}
               alt={post.title}
-              onError={i => i.target.src = `${DefaultPost}`}
+              onError={i => (i.target.src = `${DefaultPost}`)}
               className="img-thumbnail mb-3"
               style={{ height: "auto", width: "100%", objectFit: "cover"}}
             />

@@ -27,8 +27,8 @@ class NewPost extends Component {
   // IS VALID
   isValid =() => {
     const { title, body, fileSize } = this.state;
-    if(fileSize > 200000) {
-      this.setState({error: "File size should be less than 200kb.", loading: false});
+    if(fileSize > 2000000) {
+      this.setState({error: "File size should be less than 2 mb.", loading: false});
       return false;
     }
     if(title.length === 0 || body.length === 0) {
