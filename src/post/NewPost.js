@@ -10,7 +10,6 @@ class NewPost extends Component {
     this.state= {
       title: "",
       body: "",
-      photo: "",
       error: "",
       user: {},
       fileSize: 0,
@@ -125,7 +124,6 @@ class NewPost extends Component {
     const {
       title,
       body,
-      photo,
       user,
       error,
       loading,
