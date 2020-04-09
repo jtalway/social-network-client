@@ -8,15 +8,15 @@ const Home = () => (
       <p className="lead">Social Network web app... in development by Jason Alway... using MERN Stack</p>
       <hr />
       <h6>GitHub links</h6>
-      <ul class="nav">
-        <li class="nav-item">
-          <a class="nav-link" href="https://github.com/jtalway/social-network-client">Client</a>
+      <ul className="nav">
+        <li className="nav-item">
+          <a className="nav-link" href="https://github.com/jtalway/social-network-client">Client</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://github.com/jtalway/social-network-api">API</a>
+        <li className="nav-item">
+          <a className="nav-link" href="https://github.com/jtalway/social-network-api">API</a>
         </li>
       </ul>
-      
+
     </div>
     <div className="container">
       <Posts />
