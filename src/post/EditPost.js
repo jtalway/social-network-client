@@ -6,7 +6,7 @@ import DefaultPost from "../images/posts.jpg";
 
 class EditPost extends Component {
   constructor() {
-    super()
+    super();
     this.state = {
       id: "",
       title: "",

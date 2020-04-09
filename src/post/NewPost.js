@@ -125,6 +125,7 @@ class NewPost extends Component {
     const {
       title,
       body,
+      photo,
       user,
       error,
       loading,
@@ -154,7 +155,7 @@ class NewPost extends Component {
             ""
         )}
 
-        {this.newPostForm(title, body)}
+        {this.newPostForm(title, body, photo)}
 
       </div>
     );
