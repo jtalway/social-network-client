@@ -6,10 +6,11 @@ import { create } from "./apiPost";
 class NewPost extends Component {
 
   constructor() {
-    super()
+    super();
     this.state= {
       title: "",
       body: "",
+      photo: "",
       error: "",
       user: {},
       fileSize: 0,
@@ -138,8 +139,10 @@ class NewPost extends Component {
     return (
       <div className="container">
         <h2 className="mt-5 mb-5">Create New Post</h2>
-
-        <div className="alert alert-danger" style={{ display: error ? "" : "none" }}>
+        <div
+          className="alert alert-danger"
+          style={{ display: error ? "" : "none" }}
+        >
           {error}
         </div>
 
