@@ -46,6 +46,13 @@ class NewPost extends Component {
     const value = name === "photo" ? event.target.files[0] : event.target.value;
     // grab file size
     const fileSize = name === "photo" ? (event.target.files.length && event.target.files[0].size) : 0;
+    if (fileSize > 2000000) {
+           this.setState({
+               error: "File size should be less than 2 mb.",
+               loading: false
+           });
+           return false;
+       }
     // set the name and value
     this.postData.set(name, value);
     // Set State
