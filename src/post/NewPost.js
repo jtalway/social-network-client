@@ -48,7 +48,7 @@ class NewPost extends Component {
     const fileSize = name === "photo" ? (event.target.files.length && event.target.files[0].size) : 0;
     if (fileSize > 2000000) {
            this.setState({
-               error: "File size should be less than 2 mb.",
+               error: "Image size is larger than the limit of 2mb. Default photo will be used instead.",
                loading: false
            });
            return false;

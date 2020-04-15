@@ -5,7 +5,9 @@ const Home = () => (
   <div>
     <div className="jumbotron">
       <h2>Welcome</h2>
-      <p className="lead">Social Network web app... in development by Jason Alway... using MERN Stack</p>
+      <p className="lead">Social Network web app...
+       in development by <a href="https://jtalway.github.io">Jason Alway</a>
+        ... using MERN Stack</p>
       <hr />
       <h6>GitHub links</h6>
       <ul className="nav">
